@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <!-- Plugins SÓ para o calendário -->
+    <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css">
+    <!-- fim dos Plugins SÓ para o calendário -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--/importação dos icones -->
+    <title>PROTOCOL - Calculadora Contábil</title>
+  </head>
+  <body>
+    <header class="header">
+        <nav class="navbar">
+           <div class="icones-esquerda">
+             <button href="#" class="btn btn-mobile">
+                <i class="fa-solid fa-bars"></i>
+             </button>
+             <a href="#" id="logo-page"><img class="logo" src="img/protocol.png" /></a>
+           </div>
+           
+           <ul id="nav-links" class="">
+                <li><a href=".data-inputs">Entrada de dados</a></li>
+                <li><a href=".results">resultados</a></li>
+                <li><a href=".portfolio">contato</a></li>
+            </ul>
+
+            <div class="icones-direita">
+               
+               <button href="#" class="btn btn-login">
+                   <i class="fa-regular fa-user"></i>
+               </button>
+
+               <div id="login-box" class="">
+                    <label for="name">  <!--/ao apertar no icone ou no texto, o foco vai para o input -->
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="name" placeholder="Nome completo">
+                        </div>
+                    </label>
+                </div>
+                <div id="password-box" class="">
+                    <label for="senha">  <!--/ao apertar no icone ou no texto, o foco vai para o input -->
+                        <div class="input-field">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" id="senha" placeholder="senha">
+                        </div>
+                    </label>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    
+    <main class="calculadora">
+      
+      <div class="home">
+        <div class="page-title">CALCULADORA TRIBUTÁRIA</div>
+        <div class="page-subtitle">Descubra qual regime tributário será mais benéfico para seu tipo de trabalho, destinada a empreendedores e trabalhadores autônomos</div>
+      </div>
+
+      <section class="tipos">
+        
+       <div class="tipo">
+          <p class="tipo-descricao">Selecione o tipo de empresa:</p>
+          
+          <div class="opcoes">
+             <button href="#" class="" id="comercio">
+               <div class="descricao-tipo">Comércio</div>
+               <img id="icon-tipo" class="" src="img/comercio-icon.png" />
+             </button>
+             <button href="#" class="" id="servico">
+               <div class="descricao-tipo">Serviço</div>
+               <img id="icon-tipo" class="" src="img/servico-icon.png" />
+             </button>
+          </div>
+       </div>
+      
+       <div class="" id="sub-tipo">
+    
+          <div class="title-subtipo">Selecione o sub-tipo:</div>
+
+          <div class="" id="subtipos-servico">
+              <button href="#" class="" id="medico">
+                 <div class="descricao-subtipo">serviços médicos</div>
+                 <img class="icon-subtipo" src="img/medico.png" />
+              </button>
+              <button href="#" class="" id="advogado">
+                 <div class="descricao-subtipo">Serviços advocatícios</div>
+                 <img class="icon-subtipo" src="img/advocacia.png" />
+              </button>
+              <button href="#" class="" id="contabilidade">
+                 <div class="descricao-subtipo">Contabilidade</div>
+                 <img class="icon-subtipo" src="img/contabilidade.png" />
+              </button>
+              <button href="#" class="" id="construcao">
+                 <div class="descricao-subtipo">Construção Civil</div>
+                 <img class="icon-subtipo" src="img/construção.png" />
+              </button>
+              <button href="#" class="" id="estetica">
+                 <div class="descricao-subtipo">Beleza e Estética</div>
+                 <img class="icon-subtipo" src="img/estetica.png" />
+              </button>
+              <button href="#" class="" id="ensino">
+                 <div class="descricao-subtipo">Educação e Trenamento</div>
+                 <img class="icon-subtipo" src="img/ensino.png" />
+              </button>
+              <button href="#" class="" id="academia">
+                 <div class="descricao-subtipo">Academia e ginástica</div>
+                 <img class="icon-subtipo" src="img/academia.png" />
+              </button>
+             <button href="#" class="" id="representante">
+                 <div class="descricao-subtipo">Representação Comercial</div>
+                 <img class="icon-subtipo" src="img/representante.png" />
+             </button>
+             <button href="#" class="" id="software">
+                 <div class="descricao-subtipo">Desenvolvedor de Software</div>
+                 <img class="icon-subtipo" src="img/software.png" />
+             </button>
+             <button href="#" class="" id="manutencao">
+                 <div class="descricao-subtipo">Manutenção e reparo</div>
+                 <img class="icon-subtipo" src="img/manutenção.png" />
+             </button>
+             <button href="#" class="" id="transporte">
+                 <div class="descricao-subtipo">Motorista</div>
+                 <img class="icon-subtipo" src="img/motorista.png" />
+             </button>
+            <button href="#" class="" id="limpeza">
+                 <div class="descricao-subtipo">Limpeza e vigilância</div>
+                 <img class="icon-subtipo" src="img/limpeza.png" />
+            </button>
+          </div> 
+          <div class="" id="subtipos-comercio">
+              <button href="#" class="" id="roupa">
+                 <div class="descricao-subtipo">Vestuário e Bijuterias</div>
+                 <img class="icon-subtipo" src="img/roupa.png" />
+              </button>
+              <button href="#" class="" id="higiene">
+                 <div class="descricao-subtipo">Produtos de higiene Pessoal</div>
+                 <img class="icon-subtipo" src="img/higiene.png" />
+              </button>
+              <button href="#" class="" id="auto-pecas">
+                 <div class="descricao-subtipo">Auto-Peças</div>
+                 <img class="icon-subtipo" src="img/autopeca.png" />
+              </button>
+              <button href="#" class="" id="material-construcao">
+                 <div class="descricao-subtipo">Material de Construção</div>
+                 <img class="icon-subtipo" src="img/construcao.png" />
+              </button>
+              <button href="#" class="" id="restaurante">
+                 <div class="descricao-subtipo">Lanchonetes e Restaurantes</div>
+                 <img class="icon-subtipo" src="img/restaurant.png" />
+              </button>
+              <button href="#" class="" id="joias">
+                 <div class="descricao-subtipo">Loja de Jóias</div>
+                 <img class="icon-subtipo" src="img/joia.png" />
+              </button>
+              
+          </div>
+          
+       </div>
+      </section>
+
+      <section class="data-inputs">
+
+        <div id="dados-principais" class="">
+          <div class="data-input"> 
+            <div class="titulo-datainput">
+              <p> Selecione o período</p>
+              <p id="sub-titulo"> <span>de apuração:</span>  </p>
+              <button id="calendario-button" class="btn btn-calendar"><i class="fa-solid fa-calendar"></i></button>
+            </div>
+            <form id="data-search" class="form-search">
+              <input type="text" id="month-select" name="mes-apuracao" placeholder="Selecione o mês a ser apurado:" autocomplete="off">
+            </form>
+            <div id="botões">
+              <button type="submit">
+                Cancelar
+                </button>
+              <button type="submit">
+                Ok
+              </button>
+            </div>
+          </div>
+          <div class="rbt-input"> 
+            <div id="rbt-description">
+              <img src="img/salario.png" alt="" id="salario-icon">
+              <h2>Receita Mensal:</h2>
+            </div> 
+           <form id="valor-rbt">
+            <input type="text" class="valor-rbt-input" name="value-rbt" placeholder="Valor em Reais (R$)" autocomplete="off"> <!--  no JS está como: receitaBrutaInput-->
+            <button type="reset">
+                <i class="fa-solid fa-close"></i>
+            </button>
+           </form>
+          </div>
+          <div class="pro-labore-container">
+            <div id="slider">
+            <label for="sliderProLabore">Percentual de Pró-labore: <span id="valorPercentual">28%</span></label>
+            <input type="range" id="sliderProLabore" min="0" max="100" value="28" step="1">
+            </div>
+            <small id="infoFatorR">Ideal para o Fator R (mínimo 28%)</small>
+          </div>
+          <div id="escolha-tipo">
+            <button id="escolha-mei"class="">MEI</button>
+            <button id="escolha-pf" class="">PF</button>
+            <button id="escolha-sn"  class="">SN</button>
+          </div>
+          <div id="impostos-grid" class="">
+            
+            <div class="inss-mei">
+                <p>INSS:</p>
+                <div id="inss-mei"> Valor em (R$)</div>
+            </div>
+            <div class="inss-pf">
+                <p>INSS:</p>
+                <div id="inss-pf"> Valor em (R$)</div>
+            </div>
+            <div class="inss-sn">
+                <p>INSS:</p>
+                <div id="inss-sn"> Valor em (R$)</div>
+            </div>
+            <div class="irpf-sn">
+                <p>IRPF:</p>
+                <div id="irpf-sn"> Valor em (R$)</div>
+            </div>
+            <div class="irpf-pf">
+                <p>IRPF:</p>
+                <div id="irpf-pf"> Valor em (R$)</div>
+            </div>
+            <div class="irpf-mei">
+                <p>IRPF:</p>
+                <div id="irpf-mei"> Valor em (R$)</div>
+            </div>
+            <div class="sn">
+                <p>SN:</p>
+                <div id="sn"> Valor em (R$)</div>
+            </div>
+            <div class="mei">
+                <p>MEI:</p>
+                <div id="mei"> Valor em (R$)</div>
+            </div>
+            <div class="ic">
+                <p>ISS:</p>
+                <div id="ic"> Valor em (R$)</div>
+            </div>
+            <button href="#" class="" id="opcao-inss-pf">
+               <div class="opcao-inss-titulo">Regime de INSS:</div>
+               <div id="inss-escolha-pf" class="">Simplificado (11%)</div>
+             </button>
+             <button href="#" class="" id="opcao-inss-mei">
+               <div class="opcao-inss-titulo">Regime de INSS:</div>
+               <div id="inss-escolha-mei" class="">Incluso no MEI</div>
+             </button>
+            <button href="#" class="" id="opcao-inss-sn">
+               <div class="opcao-inss-titulo">Regime de INSS:</div>
+               <div id="inss-escolha-sn" class="">Simplificado (11%)</div>
+             </button>
+          </div>
+          <div id="main-reset" role="button" class="reset-button">
+            <div>Limpar Seção</div>
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div id="rbt12" class="">  
+
+          <div id="rbt12-title">
+            <img src="img/salario.png" alt="">
+            <p>Faturamento nos últimos 12 Meses <br> (RBT12)</p>
+          </div>
+          <div class="dados-rbt">
+            
+            <div class="rbt12-descricao">
+              <h4>Mês</h4>
+              <h3> Valor em Reais (R$)</h3>
+            </div>
+              
+            <form id="rbt-1">
+              <h4>Mês</h4>
+              <input type="text" id="valor-rbt-1" name="value-rbt" placeholder="Valor emReais (R$) " autocomplete="off">
+            </form>
+
+            <form id="rbt-2">
+              <h4>Mês</h4> 
+              <input type="text" id="valor-rbt-2" name="value-rbt" placeholder="Valor em  Reais (R$) " autocomplete="off">
+            </form>
+
+            <form id="rbt-3">
+              <h4>Mês</h4>
+              <input type="text" id="valor-rbt-3" name="value-rbt" placeholder="Valor em  Reais (R$) ">
+            </form>
+                
+            <form id="rbt-4">
+              <h4>Mês</h4>
+              <input type="text" id="valor-rbt-1" name="value-rbt" placeholder="R$ 1.000.00000">
+            </form>
+
+            <form id="rbt-5">
+              <h4>Mês</h4>
+              <input type="text" id="valor-rbt-1" name="value-rbt" placeholder="Valor em  Reais (R$) ">
+            </form>
+
+            <form id="rbt-6">
+              <h4>Mês</h4>
+              <input type="text" id="valor-rbt-1" name="value-rbt" placeholder="Valor em  Reais (R$) ">
+            </form>
+
+            <form id="rbt-7">
+              <h4>Mês</h4>
+              <input type="text" id="valor-rbt-1" name="value-rbt" placeholder="Valor em  Reais (R$) ">
+            </form>
+
+            <form id="rbt-8">
+              <h4>Mês</h4>
+              <input type="text" id="valor-rbt-1" name="value-rbt" placeholder="Valor em  Reais (R$) ">
+            </form>
+
+            <form id="rbt-9">
+                <h4>Mês</h4>
+                <input type="text" id="valor-rbt-1" name="value-rbt" placeholder="Valor em   Reais (R$) ">
+             </form>
+
+             <form id="rbt-10">
+                <h4>Mês</h4>
+                <input type="text" id="valor-rbt-1" name="value-rbt" placeholder="Valor em   Reais (R$) ">
+             </form>
+             <form id="rbt-11">
+                <h4>Mês</h4>
+                <input type="text" id="valor-rbt-1" name="value-rbt" placeholder="Valor em   Reais (R$) ">
+             </form>
+             <form id="rbt-12">
+                <h4>Mês</h4>
+                <input type="text" id="valor-rbt-1" name="value-rbt" placeholder="Valor em Reais (R$) ">
+             </form>
+             <div id="total-rbt"> R$ 0,00</div>
+          </div>
+          <div class="others-buttons">
+          <div id="rbt-reset" role="button" class="reset-button">
+            <div>Limpar Seção</div>
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+          </div>
+          <div id="rbt-replicate" role="button" class="replicate-button">
+            <i class="fa fa-clone"></i> Replicar
+          </div>
+          </div>
+
+        </div>
+        <div id="fs12" class="">  
+
+          <div id="fs12-title">
+            <img src="img/pessoal.png" alt="">
+            <p>Folha Salarial dos últimos 12 Meses<br>(FS12)</p>
+          </div>
+          <div class="dados-fs">
+            
+            <div class="fs12-descricao">
+              <h4>Mês</h4>
+              <h3> Valor em Reais (R$)</h3>
+              
+            </div>
+              
+              <form id="fs-1">
+                <h4>Mês</h4>
+                <input type="text" id="valor-fs-1" name="value-fs" placeholder="Valor em Reais (R$) ">
+             </form>
+             <form id="fs-2">
+               <h4>Mês</h4> 
+               <input type="text" id="valor-fs-2" name="value-fs" placeholder="Valor em   Reais (R$) ">
+             </form>
+             <form id="fs-3">
+                <h4>Mês</h4>
+                <input type="text" id="valor-fs-3" name="value-fs" placeholder="Valor em   Reais (R$) ">
+             </form>
+             <form id="fs-4">
+                <h4>Mês</h4>
+                <input type="text" id="valor-fs-1" name="value-fs" placeholder="R$ 1.000.000,00">
+             </form>
+             <form id="fs-5">
+                <h4>Mês</h4>
+                <input type="text" id="valor-fs-1" name="value-fs" placeholder="Valor em   Reais (R$) ">
+             </form>
+             <form id="fs-6">
+                <h4>Mês</h4>
+                <input type="text" id="valor-fs-1" name="value-fs" placeholder="Valor em   Reais (R$) ">
+             </form>
+             <form id="fs-7">
+                <h4>Mês</h4>
+                <input type="text" id="valor-fs-1" name="value-fs" placeholder="Valor em   Reais (R$) ">
+             </form>
+             <form id="fs-8">
+                <h4>Mês</h4>
+                <input type="text" id="valor-fs-1" name="value-fs" placeholder="Valor em   Reais (R$) ">
+             </form>
+             <form id="fs-9">
+                <h4>Mês</h4>
+                <input type="text" id="valor-fs-1" name="value-fs" placeholder="Valor em   Reais (R$) ">
+             </form>
+             <form id="fs-10">
+                <h4>Mês</h4>
+                <input type="text" id="valor-fs-1" name="value-fs" placeholder="Valor em   Reais (R$) ">
+             </form>
+             <form id="fs-11">
+                <h4>Mês</h4>
+                <input type="text" id="valor-fs-1" name="value-fs" placeholder="Valor em   Reais (R$) ">
+             </form>
+             <form id="fs-12">
+                <h4>Mês</h4>
+                <input type="text" id="valor-fs-1" name="value-fs" placeholder="Valor em Reais (R$) ">
+             </form>
+             <div id="total-fs"> R$ 0,00</div>
+          </div>
+          <div class="others-buttons">
+          <div id="fs-reset" role="button" class="reset-button">
+            <div>Limpar Seção</div>
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+          </div>
+          <div id="fs-replicate" role="button" class="replicate-button">
+            <i class="fa fa-clone"></i> Replicar
+          </div>
+          </div>
+        </div>
+        
+      </section>
+
+      <section class="resultados">
+
+        <div class="results">  
+          <h1 class="resultados-title">Resultados</h1>
+          <div id="line-detail"></div>
+          <div class="chooses">
+            
+            <div class="types">
+              <div class="type-selected">
+                <div id="results-type-description">Não selecionado</div>
+                <img id="results-type-icon" class="" src="img/notfound.png" />
+              </div>
+              <div class="subtype-selected">
+                <img id="results-subtype-icon" src="img/notfound.png" />
+                <div id="results-subtype-description">Não selecionado</div>
+              </div>
+            </div>
+            <div class="anexo">
+              <div class="anexo-selected">
+                 <img id="icon-anexo" src="img/notfound.png" />
+                 <div class="anexo-description">anexo x</div>
+              </div>
+              <div id="aliquota-fatorr" class="fatorr">
+                <p> Fator R:</p>
+                <h4 id="fatorr"> Valor em (%)</h4>
+              </div>
+              <div class="efetiva">
+                <p> Alíquota Efetiva:</p>
+                <h4 id="efetiva"> Valor em (%)</h4>
+              </div>
+            </div>
+            <div id="resumo-total">
+              <div id="rm-resultados">
+                <div>Receita Mensal</div>
+                <div id="rm-clone"> </div>
+              </div>
+              <div id="rbt-total-resultados">
+                <div>RBT12</div>
+                <div id="total-rbt-clone"> </div>
+              </div>
+              <div id="fs-total-resultados">
+                <div>FS12</div>
+                <div id="total-fs-clone"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="valores">
+           <div class="valores-totais">
+             <div class="pf-total">
+                 <p> Valor total como PF:</p>
+                 <div id="pf-total"> Valor em (R$)</div>
+              </div>
+              <div class="sn-total">
+                 <p> Valor total como SN:</p>
+                 <div id="sn-total"> Valor em (R$)</div>
+              </div>
+              <div class="mei-total">
+                 <p> Valor total como MEI:</p>
+                 <div id="mei-total"> Valor em (R$)</div>
+              </div>
+           </div>
+          <div id="valores-tributos">
+            <div id="pf-tributos-clone">
+              
+              <div class="inss-pf-clone">
+                <p>INSS:</p>
+                <div id="inss-pf-clone"> R$ 0,00</div>
+              </div>
+              <div class="irpf-pf-clone">
+                <p>IRPF:</p>
+                <div id="irpf-pf-clone"> R$ 0,00</div>
+              </div>
+              <div class="ic-clone">
+                <p>ISS:</p>
+                <div id="ic-clone"> R$ 0,00</div>
+              </div>
+            </div>
+            <div id="sn-tributos-clone">
+              <div class="inss-sn-clone">
+                <p>INSS:</p>
+                <div id="inss-sn-clone">R$ 0,00</div>
+              </div>
+              <div class="irpf-sn-clone">
+                <p>IRPF:</p>
+                <div id="irpf-sn-clone"> R$ 0,00</div>
+              </div>
+              <div class="sn-clone">
+                <p>SN:</p>
+                <div id="sn-clone"> R$ 0,00</div>
+              </div>
+            </div>
+            <div id="mei-tributos-clone">
+              <div class="inss-mei-clone">
+                <p>INSS:</p>
+                <div id="inss-mei-clone">R$ 0,00</div>
+              </div>
+              <div class="irpf-mei-clone">
+                <p>IRPF:</p>
+                <div id="irpf-mei-clone"> R$ 0,00</div>
+              </div>
+               <div class="mei-clone">
+                <p>MEI:</p>
+                <div id="mei-clone"> R$ 0,00</div>
+              </div>
+            </div>
+            
+          </div>
+   
+          </div>
+          <div class="grafico-comparativo">
+            <canvas id="grafico"></canvas>
+            <p id="grafico-descricao">Projeção comparativa de carga tributária: Analise a viabilidade entre Simples Nacional, Pessoa Física e MEI em cenários de oscilação de receita.</p>
+          </div>
+          <div id="btn-relatorio">
+          <button onclick="baixarPDF()" id="btn-pdf">
+             <i class="fa-solid fa-print"></i> Gerar PDF
+          </button><button onclick="baixarPNG()" id="btn-png">
+             <i class="fa-solid fa-camera"></i> Salvar Relatório
+          </button>
+          </div>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> <!-- Script para Salvar o Relatório PNG-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- Script para salvar relatório em PDF -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> <!-- Script para salvar relatório em PDF -->
+      </section>
+    </main>
+
+    <div id="card-flutuante" class="">
+      <div class="titulo-card">
+        <img src="" alt="">
+        <h3>teste</h3>
+      </div>
+      <div class="description">
+        <p> teste </p>
+      </div>
+    </div>
+
+    <footer class="footer"><div class="assinatura">Feito por Matheus Andrade</div></footer> 
+
+    <script src="js/script.js"></script>
+    <script src="js/apuracao.js"></script>
+    <script src="js/cardsFlutuantes.js"></script>
+    <script src="js/calendar.js"></script>
+  </body>
+</html>

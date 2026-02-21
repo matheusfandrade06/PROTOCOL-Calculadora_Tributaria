@@ -1,0 +1,76 @@
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px); /* Começa (x)px abaixo da posição original */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Termina na posição correta */
+    }
+}
+
+#card-flutuante{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  
+}
+
+.active{
+  display: block !important; /*não permite que use o 'gap'*/
+  flex-direction: column;
+  height: fit-content;
+  border-radius: 8px;
+  background-color: #262626;
+  color: white;
+  z-index: 1;
+  padding: 10px;
+  font-size: 10px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: opacity 0.5s ease;
+  animation: slideUp 0.1s ease-out ; /* 0.4s é um tempo fluido, ease-out faz começar rápido e parar suave */
+
+    .titulo-card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        img{ 
+            display: flex;
+            width: 55px;
+            height: 55px;    
+        }
+        h3{
+            font-weight: 400;
+            font-size: 18px;
+            white-space: pre-line;  /* permite o uso de \n */
+            text-align: center;
+            width: 100%; /* Força o h3 a ocupar a largura total do card */
+
+        }
+    }
+    .description{
+        margin-top: 5px;
+        font-weight: 200;
+        font-size: 12px;
+        background-color: #121212;
+        border-radius: 5px;
+        white-space: pre-line;  /* permite o uso de \n */
+        text-align: justify;      /* Geralmente descrições longas ficam melhores alinhadas à esquerda */
+        padding: 5px 10px;
+    }
+
+}
+
+.variavel-citada{
+    color: #7d6912;
+    font-weight: 500;
+
+}
